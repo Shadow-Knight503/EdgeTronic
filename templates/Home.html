@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EdgeTronics</title>
+    <link rel="stylesheet" href="styles/Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+<style>
+    nav {
+        background-color: lightseagreen;
+    }
+
+    .Logo_Img {
+        border-radius: 25px;
+        margin-bottom: -10px;
+        margin-left: 5px;
+        height: 40px;
+        width: 40px;
+    }
+
+    .Logo_Name {
+        font-family: "Baskerville Old Face", sans-serif;
+    }
+
+    .Main_Div {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .Quote {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.2);
+        transform: translate(-5%, -5%) scale(0);
+        border-radius: 15px;
+        margin-top: 10%;
+        left: 50%;
+        right: 5%;
+        color: white;
+        animation: QuoteBlock 0.4s forwards ease-out;
+    }
+
+    @keyframes QuoteBlock {
+        to {
+            transform: translate(-5%, -5%) scale(1);
+        }
+    }
+
+    .Quote_Cnt {
+        font-size: 50px;
+        font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+        transform: translateX(150%) scale(0);
+        animation: QuoteCnt 0.4s 0.6s forwards ease;
+    }
+
+    @keyframes QuoteCnt {
+        to {
+            transform: translateX(0%) scale(1);
+        }
+    }
+
+    .Cover_Img {
+        height: 100%;
+        width: 100%;
+        float: left;
+    }
+
+    .Why_Us {
+        color: white;
+        position: absolute;
+        margin-top: 65%;
+        left: 25%;
+        right: 25%;
+        overflow: hidden;
+    }
+
+    .Why_Us_Ttl {
+        font-size: 40px;
+        font-family: "Felix Titling", serif;
+        transform: translateX(-50%);
+    }
+
+    .Why_Us_Ani {
+        animation: WhyUsTtl 0.7s forwards ease;;
+    }
+
+    @keyframes WhyUsTtl {
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    .Why_Us_Cnt {
+        font-size: 30px;
+        line-height: 150%;
+        font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+        transform: translateY(150%);
+    }
+
+    .Why_Us_Cnt_Ani {
+        animation: WhyCnt 0.7s 0.4s forwards ease;
+    }
+
+    @keyframes WhyCnt {
+        to {
+            transform: translateY(0%);
+        }
+    }
+    .About_Us {
+        color: white;
+        position: absolute;
+        margin-top: 110%;
+        left: 25%;
+        right: 25%;
+        overflow: hidden;
+    }
+    .AbtUs_Ttl {
+        font-size: 40px;
+        font-family: "Berlin Sans FB Demi", sans-serif;
+        transform: translateY(-50%) scale(0);
+    }
+    .AbtUs_Ttl_Ani {
+        animation: AbtUsTtl 0.4s forwards ease;
+    }
+    @keyframes AbtUsTtl {
+        to {
+            transform: translateY(0%) scale(1);
+        }
+    }
+    .AbtUs_Items {
+        font-size: 30px;
+        font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+        transform: translateX(150%);
+    }
+    .AbtUs_Items_Ani {
+        animation: AbtUsItems 0.4s 0.4s forwards ease;
+    }
+    @keyframes AbtUsItems {
+        to {
+            transform: translateX(0%);
+        }
+    }
+</style>
+{% include "NavBar.html" %}
+<div class="Main_Div" id="Hell">
+    <section class="First_Panel" id="Quote_Panel">
+        <div class="Quote">
+            <blockquote class="Quote_Cnt" style="border-color: goldenrod">
+                The Web as I envisaged it, we have not seen it yet. The future is still so much bigger than the past.
+            </blockquote>
+            <h5><b>- Tim Berners-Lee, Inventor of the World Wide Web</b></h5>
+        </div>
+        <img alt="" class="Cover_Img"
+             src="https://res.cloudinary.com/meme-topia/image/upload/v1660243182/image_2022-08-12_000846766_ny2ka6.png">
+    </section>
+    <section class="Second_Panel" id="Why_Us_Panel">
+        <div class="Why_Us">
+            <h5 class="Why_Us_Ttl" id="Why_Us_Title">Why Us ?</h5>
+            <br>
+            <p class="Why_Us_Cnt" id="Why_Us_Cnt">
+                Because we are innovative, carefull, well managed and user friendly. Our main priority is to build
+                User friendly, Long Lasting and One-of-a-kind Products</p>
+        </div>
+        <img class="Cover_Img"
+             src="https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg" alt="">
+    </section>
+    <section class="Second_Panel" id="New_Panel">
+        <div class="About_Us">
+            <h5 class="AbtUs_Ttl" id="AbtUs_Title">About Us:</h5>
+            <br>
+            <ul class="AbtUs_Cnt" id="AbtUs_List">
+                <li class="AbtUs_Items">We are a great company,</li>
+                <li class="AbtUs_Items">with a track record of success and dependability.</li>
+                <li class="AbtUs_Items">We are the best product building companies,</li>
+                <li class="AbtUs_Items">Here at Edge Tronic we value our Customers.</li>
+                <li class="AbtUs_Items">Edge Troinc guarantees only the best for You</li>
+            </ul>
+        </div>
+        <img alt="" class="Cover_Img" src="https://wallpaperaccess.com/full/187161.jpg">
+    </section>
+    <footer class="page-footer" style="background-color: rgb(0, 0, 0.4)">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Footer Content: </h5>
+                    <p class="grey-text text-lighten-4">Stuff to add.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2014 Copyright Text
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous">
+</script>
+<script type="text/javascript">
+    function delay(delayInms) {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                resolve(2);
+                }, delayInms);
+            });
+        }
+    document.addEventListener("scroll", async function () {
+        document.scrolTop = document.body.scrollHeight
+        var scrollTop = (window.pageYOffset !== undefined) ?
+            window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop
+
+        if (scrollTop > 500) {
+            document.getElementById('Why_Us_Title').classList.add('Why_Us_Ani')
+            document.getElementById('Why_Us_Cnt').classList.add('Why_Us_Cnt_Ani')
+        }
+        if (scrollTop > 900) {
+            let i;
+            document.getElementById('AbtUs_Title').classList.add('AbtUs_Ttl_Ani')
+            for (let i = 0; i < document.getElementsByClassName('AbtUs_Items').length; i++) {
+                document.getElementsByClassName('AbtUs_Items')[i].classList.add('AbtUs_Items_Ani')
+                let delayres = await delay(300);
+            }
+        }
+    })
+</script>
+</body>
+</html>
